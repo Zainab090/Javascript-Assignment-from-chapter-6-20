@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    //1. Write a program to take a number in a variable, do the
+    // required arithmetic to display the following result in your
+    // // browser:
+    let anyNumber = prompt("Enter any number:");
+    document.write("<h1>Result:</h1>");
+    document.write("The value of a is:" + anyNumber);
+    document.write("<br>..................................<br><br>");
+    let preIncrement = ++anyNumber;
+    document.write("The value of ++a is:" + preIncrement + "<br>Now the value of a is:" + preIncrement + "<br><br>");
+    let postIncrement = preIncrement++;
+    document.write("The value of a++ is:" + postIncrement + "<br>");
+    postIncrement++;
+    document.write("Now the value of a is:" + postIncrement + "<br><br>");
+    let preDecrement = --postIncrement;
+    document.write("The value of --a is:" + preDecrement + "<br>");
+    document.write("Now the value of a is:" + preDecrement + "<br><br>");
+    let postDecrement = preDecrement--;
+    document.write("The value of a-- is:" + postDecrement + "<br>");
+    postDecrement--;
+    document.write("Now value of a is:" + postDecrement + "<br>");
+    //2. What will be the output in variables a, b & result after
+    // execution of the following script:
+    // var a = 2, b = 1;
+    // var result = --a - --b + ++b + b--;
+    // Explain the output at each stage:
+    // --a;
+    // --a - --b;
+    // --a - --b + ++b;
+    // --a - --b + ++b + b--;
+    let a = 2;
+    let b = 1;
+    document.write("a is " + a + "<br>");
+    document.write("b is " + b + "<br>");
+    let result = --a - --b + ++b + b--;
+    document.write("Result" +"="+ result+"<br>");
+    // 3. Write a program that takes input a name from user &
+    // greet the user.
+    let userName = prompt("Enter your name:");
+    alert(userName + " Welcome to this Website!");
+    //5. Write a program to take input a number from user &
+    // display it’s multiplication table on your browser. If user
+    // does not enter a new number, multiplication table of 5
+    // should be displayed by default.
+    if (anyDigit = !null) {
+        let anyDigit = prompt("Enter any digit:");
+        for (let i = 1; i <= 10; i++) {
+            document.write(anyDigit + "*" + i + "=" + i * anyDigit + "<br>");
+        }
+    }
+    else {
+        let anyDigit = 5;
+        for (let i = 1; i <= 10; i++) {
+            document.write(anyDigit + "*" + i + "=" + i * anyDigit + "<br>");
+        }
+    }
+    // 6. Take
+    // a) Take three subjects name from user and store them in 3
+    // different variables.
+    // b) Total marks for each subject is 100, store it in another
+    // variable.
+    // c) Take obtained marks for first subject from user and
+    // stored it in different variable.
+    // d) Take obtained marks for remaining 2 subjects from user
+    // and store them in variables.
+    // e) Now calculate total marks and percentage and show the
+    // result in browser like this.(Hint: user table)
+    // document.write("<h1>Subject  Total Marks   Obtained marks   Percentage </h1>")
+    let firstSubject = prompt("Enter your 1st Subject:" + "\n");
+    let secondSubject = prompt("Enter your 2nd Subject:" + "\n");
+    let thirdSubject = prompt("Enter your 3rd Subject:" + "\n");
+    let firstSubjectMarks =parseInt( prompt("Enter your marks in 1st Subject:" + "\n"));
+    let secondSubjectMarks =parseInt( prompt("Enter your marks in 2nd Subject:" + "\n"));
+    let thirdSubjectMarks =parseInt( prompt("Enter your marks in 3rd Subject:" + "\n"));
+    let userSub1 = firstSubject;
+    let userSub2 = secondSubject;
+    let userSub3 = thirdSubject;
+    let totalMarks = 100;
+    let grandTotal=totalMarks+totalMarks+totalMarks;
+    let mark1 = firstSubjectMarks;
+    let mark2 = secondSubjectMarks;
+    let mark3 = thirdSubjectMarks;
+    let totalObtainedMarks =mark1+mark2+mark3;
+    let percentageSub1 = mark1 / totalMarks * 100;
+    let percentageSub2 = mark2 / totalMarks * 100;
+    let percentageSub3 = mark3 / totalMarks * 100;
+    let totalPercentage = totalObtainedMarks/grandTotal*100;
+    document.write("<table border='1'>");
+    document.write("<tr><th>Subject</th> <th> Total Marks </th> <th> Obtained marks </th><th>  Percentage</th></tr>")
+    document.write("<tr><td>" + userSub1 + "</td><td>" + totalMarks + "</td><td>" + mark1 + "</td><td>" + percentageSub1 + "</td></tr>");
+    document.write("<tr><td>" + userSub2 + "</td><td>" + totalMarks + "</td><td>" + mark2 + "</td><td>" + percentageSub2 + "</td></tr>");
+    document.write("<tr><td>" + userSub3 + "</td><td>" + totalMarks + "</td><td>" + mark3 + "</td><td>" + percentageSub3 + "</td></tr>");
+    document.write("<tr><td>Total</td><td>"+ grandTotal+"</td><td>"+totalObtainedMarks+"</td><td>"+totalPercentage+ "</td></tr>");
+    document.write("</table>");
+
+
+  </script>
+</head>
+
+<body>
+</body>
+
+</html>
